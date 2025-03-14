@@ -1,0 +1,85 @@
+/* src/Cart.css */
+
+.cart {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cart button:hover {
+  background-color: #3498db;
+  transform: translateY(-2px);
+}
+
+.cart .cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cart .clear-cart-btn {
+  background-color: #e74c3c;
+}
+
+.cart .clear-cart-btn:hover {
+  background-color: #c0392b;
+}
+
+.cart .checkout-btn {
+  background-color: #2ecc71;
+}
+
+.cart .checkout-btn:hover {
+  background-color: #27ae60;
+}
+
+.cart .popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2980b9;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

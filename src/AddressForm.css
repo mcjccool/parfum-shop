@@ -1,0 +1,102 @@
+/* AddressForm.css */
+
+.address-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #D4AF37; /* Gold */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.address-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.address-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.address-form input,
+.address-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.address-form .error {
+  color: red;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.address-form .gender-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.address-form .gender-options input {
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.button-group button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkout-btn,
+.back-btn {
+  background-color: #D4AF37; /* Gold */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover,
+.back-btn:hover {
+  background-color: #B8860B; /* Dunkleres Gold */
+}
+
+#show-password {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#show-password input {
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .button-group button {
+    margin-bottom: 10px;
+  }
+}

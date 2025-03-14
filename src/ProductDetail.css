@@ -1,0 +1,117 @@
+/* src/ProductDetail.css */
+.product-detail {
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #D4AF37;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail h2 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.product-detail p {
+  margin: 10px 0;
+}
+
+.product-detail label {
+  display: block;
+  margin: 10px 0;
+}
+
+.product-detail select,
+.product-detail input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.product-detail button {
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.product-detail button:hover {
+  background-color: #B8860B; 
+}
+
+.price-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.total-price {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.star {
+  color: gold;
+  font-size: 1.5em;
+}
+
+.half {
+  position: relative;
+}
+
+.half::before {
+  content: '\2605'; /* Halber Stern */
+  position: absolute;
+  left: 0;
+  color: gold;
+  width: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.notification {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #D4AF37;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  animation: fadeinout 2s forwards;
+}
+
+@keyframes fadeinout {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fly-to-cart {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50px) translateX(100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) translateX(200px);
+  }
+}
+
+.fly {
+  animation: fly-to-cart 1s ease forwards;
+}

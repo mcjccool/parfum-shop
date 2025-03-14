@@ -1,0 +1,70 @@
+/* src/GuestCheckout.css */
+
+.guest-checkout {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.guest-checkout h2 {
+  margin-bottom: 20px;
+}
+
+.guest-checkout label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.guest-checkout input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-buttons button {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkout-buttons button:nth-child(1) {
+  background: #ff4d4d;
+  color: white;
+}
+
+.checkout-buttons button:nth-child(2) {
+  background: #f0ad4e;
+  color: white;
+}
+
+.checkout-buttons button:nth-child(3) {
+  background: #28a745;
+  color: white;
+}
+
+.checkout-buttons button:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
