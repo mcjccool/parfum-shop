@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/parfum-shop/static/css/main.d1a08a45.css",
+    "main.js": "/parfum-shop/static/js/main.6db1b642.js",
+    "index.html": "/parfum-shop/index.html",
+    "main.d1a08a45.css.map": "/parfum-shop/static/css/main.d1a08a45.css.map",
+    "main.6db1b642.js.map": "/parfum-shop/static/js/main.6db1b642.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1a08a45.css",
+    "static/js/main.6db1b642.js"
+  ]
+}
