@@ -5,10 +5,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000; // Automatische Port-Erkennung für Render
 
+// ✅ Erlaubt externe Zugriffe (CORS)
+const corsOptions = {
+  origin: "*", // Erlaubt alle Domains
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use(cors());
 
 const orders = [];
 let orderId = 1;
@@ -294,9 +301,11 @@ const products = [
   }
 ];
 
+// 🔍 Hilfsfunktionen für Benutzerverwaltung
 const findUserById = (id) => users.find(user => user.id === parseInt(id));
 const findUserByEmail = (email) => users.find(user => user.email === email);
 
+// 🧑‍💻 API-Endpunkte
 app.get('/api/users', (req, res) => {
   const { email } = req.query;
   const user = findUserByEmail(email);
@@ -373,6 +382,7 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 
+// 🚀 Starte den Server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`✅ Server is running on port ${port}`);
 });
