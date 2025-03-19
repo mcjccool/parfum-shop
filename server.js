@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000; // Automatische Port-Erkennung für Render
@@ -16,6 +17,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
+
+// ✅ Statische Dateien für Bilder bereitstellen (Render braucht das)
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 const orders = [];
 let orderId = 1;
@@ -368,6 +372,7 @@ app.get('/api/orders', (req, res) => {
   res.json(orders);
 });
 
+// 🛒 API Routen
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
@@ -384,5 +389,5 @@ app.get('/api/products/:id', (req, res) => {
 
 // 🚀 Starte den Server
 app.listen(port, () => {
-  console.log(`✅ Server is running on http://localhost: ${port}`);
+  console.log(`✅ Server läuft auf: http://localhost:${port} oder in Render unter deiner Live-URL`);
 });
