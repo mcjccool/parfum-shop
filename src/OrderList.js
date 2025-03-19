@@ -8,7 +8,7 @@ const OrderList = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/orders')
+    fetch('https://parfum-shop.onrender.com/api/orders')
       .then(response => response.json())
       .then(data => setOrders(data))
       .catch(error => console.error('Error fetching orders:', error));

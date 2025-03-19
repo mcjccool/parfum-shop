@@ -2,7 +2,7 @@
   "name": "parfum-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mcjccool.github.io/parfum-shop",
+  "homepage": "https://mcjccool.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

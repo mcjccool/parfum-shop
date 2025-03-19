@@ -7,7 +7,7 @@ const Orders = ({ user }) => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/api/orders?userId=${user.id}`)
+      fetch(`https://parfum-shop.onrender.com/api/orders?userId=${user.id}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

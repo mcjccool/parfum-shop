@@ -46,14 +46,14 @@ const Address = ({ user }) => {
     }
 
     // Schaut ob die E-Mail bereits vorhanden ist
-    fetch(`http://localhost:5000/api/users?email=${email}`)
+    fetch(`https://parfum-shop.onrender.com/api/users?email=${email}`)
       .then(response => response.json())
       .then(data => {
         if (data.length > 0 && data[0].password !== password) {
           setError('Die E-Mail wird bereits verwendet. Geben Sie das richtige Passwort an.');
         } else {
           // Speichert die Daten des Users
-          fetch('http://localhost:5000/api/register', {
+          fetch('https://parfum-shop.onrender.com/api/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

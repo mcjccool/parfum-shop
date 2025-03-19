@@ -32,7 +32,7 @@ const Register = ({ setUser }) => {
       return;
     }
 
-    fetch(`http://localhost:5000/api/users?email=${email}`)
+    fetch(`https://parfum-shop.onrender.com/api/users?email=${email}`)
       .then(response => {
         if (response.status === 404) {
           return [];
@@ -46,7 +46,7 @@ const Register = ({ setUser }) => {
         if (data.length > 0) {
           setError('Die E-Mail wird bereits verwendet.');
         } else {
-          fetch('http://localhost:5000/api/register', {
+          fetch('https://parfum-shop.onrender.com/api/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

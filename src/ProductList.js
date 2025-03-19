@@ -9,7 +9,7 @@ const ProductList = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch('https://parfum-shop.onrender.com/api/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);

@@ -15,7 +15,7 @@ const ProductDetail = () => {
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`https://parfum-shop.onrender.com/api/products/${id}`)
       .then(response => response.json())
       .then(data => {
         setProduct(data);
