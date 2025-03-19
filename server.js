@@ -15,7 +15,13 @@ const corsOptions = {
   credentials: true
 };
 
-app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // Ändere zu deiner Frontend-URL falls nötig
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(bodyParser.json());
 
 // ✅ Statische Dateien für Bilder bereitstellen (Render braucht das)
