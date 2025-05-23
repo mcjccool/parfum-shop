@@ -10,7 +10,7 @@ const ProductItem = ({ product }) => {
 
   return (
     <div className="product-item">
-      <img src={imageUrl} alt={name} />
+      <img src={process.env.PUBLIC_URL + product.imageUrl} alt={product.name} />
       <h2>{name}</h2>
       <p>{brand}</p>
       <p>ab {price.toFixed(2)} CHF</p>
