@@ -1,7 +1,7 @@
 // src/App.js
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SearchBar from './SearchBar';
 import ProductList from './ProductList';
@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <CartProvider>
-      <Router>
+      <BrowserRouter basename='/parfum-shop'>
         <div className="App">
           <header>
             <h1>ParfumSamples.ch</h1>
@@ -50,7 +50,7 @@ const App = () => {
             </Routes>
           </main>
         </div>
-      </Router>
+      </BrowserRouter>
     </CartProvider>
   );
 };

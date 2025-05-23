@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000; // Automatische Port-Erkennung für Render
 
-// ✅ Erlaubt externe Zugriffe (CORS)
+// Erlaubt externe Zugriffe
 const corsOptions = {
   origin: "*", // Erlaubt alle Domains
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -16,7 +16,7 @@ const corsOptions = {
 };
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Ändere zu deiner Frontend-URL falls nötig
+  res.header("Access-Control-Allow-Origin", "*"); 
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-// ✅ Statische Dateien für Bilder bereitstellen (Render braucht das)
+// Statische Dateien für Bilder bereitstellen
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 const orders = [];
@@ -311,11 +311,11 @@ const products = [
   }
 ];
 
-// 🔍 Hilfsfunktionen für Benutzerverwaltung
+// Hilfsfunktionen für Benutzerverwaltung
 const findUserById = (id) => users.find(user => user.id === parseInt(id));
 const findUserByEmail = (email) => users.find(user => user.email === email);
 
-// 🧑‍💻 API-Endpunkte
+//  API-Endpunkte
 app.get('/api/users', (req, res) => {
   const { email } = req.query;
   const user = findUserByEmail(email);
@@ -378,7 +378,7 @@ app.get('/api/orders', (req, res) => {
   res.json(orders);
 });
 
-// 🛒 API Routen
+// API Routen
 app.get('/api/products', (req, res) => {
   res.json(products);
 });
@@ -393,7 +393,7 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 
-// 🚀 Starte den Server
+// Startet den Server
 app.listen(port, () => {
-  console.log(`✅ Server läuft auf: http://localhost:${port} oder in Render unter deiner Live-URL`);
+  console.log(`Server läuft auf: http://localhost:${port} oder in Render unter deiner Live-URL`);
 });
