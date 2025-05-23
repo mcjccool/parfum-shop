@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/parfum-shop/static/css/main.d1a08a45.css",
-    "main.js": "/parfum-shop/static/js/main.12bfdaed.js",
+    "main.js": "/parfum-shop/static/js/main.a891314e.js",
     "index.html": "/parfum-shop/index.html",
     "main.d1a08a45.css.map": "/parfum-shop/static/css/main.d1a08a45.css.map",
-    "main.12bfdaed.js.map": "/parfum-shop/static/js/main.12bfdaed.js.map"
+    "main.a891314e.js.map": "/parfum-shop/static/js/main.a891314e.js.map"
   },
   "entrypoints": [
     "static/css/main.d1a08a45.css",
-    "static/js/main.12bfdaed.js"
+    "static/js/main.a891314e.js"
   ]
 }
