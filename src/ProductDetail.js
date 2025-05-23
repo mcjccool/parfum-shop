@@ -90,7 +90,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <img src={product.imageUrl} alt={product.name} className="product-image" />
+      <img src={process.env.PUBLIC_URL + product.imageUrl} alt={product.name} className="product-image" />
       <h2>{product.name}</h2>
       <p>Marke: {product.brand}</p>
       <p>{product.description}</p>
