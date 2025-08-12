@@ -15,6 +15,7 @@ import { CartProvider } from './CartContext';
 import Address from './AddressForm';
 import Payment from './PaymentForm';
 import Confirmation from './Confirmation';
+import GuestCheckout from './GuestCheckout'; 
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -47,6 +48,7 @@ const App = () => {
               <Route path="/address" element={<Address user={user} />} />
               <Route path="/payment" element={<Payment user={user} />} />
               <Route path="/confirmation" element={<Confirmation />} />
+              <Route path="/GuestCheckout" element={<GuestCheckout />} />
             </Routes>
           </main>
         </div>

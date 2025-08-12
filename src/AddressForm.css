@@ -80,6 +80,43 @@
   background-color: #B8860B; /* Dunkleres Gold */
 }
 
+/* sorgt für gleichmäßigen Abstand zwischen den äußeren Spalten (links/rechts) */
+.button-container {
+  display: flex;
+  gap: 32px;                 /* Abstand zwischen linkem und rechtem Block */
+  justify-content: center;   /* Buttons-Gruppe zentrieren (optional) */
+  flex-wrap: wrap;           /* bricht auf kleineren Screens schön um */
+}
+
+/* sorgt zusätzlich für den gleichen Abstand zwischen den ZWEI Checkout-Buttons
+   im rechten Block (weil dieser ein eigenes div ist) */
+.button-container > * {
+  display: flex;
+  gap: 32px;                 /* gleicher Abstand wie oben */
+}
+
+/* optional: Optik etwas abrunden/vereinheitlichen */
+.button-container .back-btn,
+.button-container .checkout-btn {
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+
+/* Mobile: untereinander und volle Breite */
+@media (max-width: 560px) {
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button-container > * {
+    width: 100%;
+  }
+  .button-container .back-btn,
+  .button-container .checkout-btn {
+    width: 100%;
+  }
+}
+
 #show-password {
   display: flex;
   align-items: center;

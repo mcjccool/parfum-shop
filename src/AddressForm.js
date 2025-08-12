@@ -252,7 +252,7 @@ const Address = ({ user }) => {
             </div>
             <div>
               <button onClick={handleProceedWithoutRegistration} className="checkout-btn">Fortfahren ohne Anmeldung</button>
-              <button onClick={handleProceedWithRegistration} className="checkout-btn">Fortfahren mit Anmeldung</button>
+              <button onClick={handleProceedWithRegistration} className="checkout-btn">Bezahlen</button>
             </div>
           </div>
           <div className="benefits">
@@ -268,7 +268,7 @@ const Address = ({ user }) => {
       {user && (
         <div className="button-container">
           <button onClick={() => navigate('/cart')} className="back-btn">Zurück</button>
-          <button onClick={handleProceedLoggedInUser} className="checkout-btn">Weiter zur Bezahlart</button>
+          <button onClick={handleProceedLoggedInUser} className="checkout-btn">Bezahlen</button>
         </div>
       )}
     </div>
