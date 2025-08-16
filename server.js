@@ -393,6 +393,16 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 
+// --- React-Frontend ausliefern (CRA-Build) ---
+app.use(express.static(path.join(__dirname, 'build')));
+
+// SPA-Fallback: alles außer /api/* liefert index.html
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
 // Startet den Server
 app.listen(port, () => {
   console.log(`Server läuft auf: http://localhost:${port} oder in Render unter deiner Live-URL`);

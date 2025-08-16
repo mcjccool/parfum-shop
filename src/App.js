@@ -15,7 +15,7 @@ import { CartProvider } from './CartContext';
 import Address from './AddressForm';
 import Payment from './PaymentForm';
 import Confirmation from './Confirmation';
-import GuestCheckout from './GuestCheckout'; 
+import GuestCheckout from './GuestCheckout';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -30,7 +30,8 @@ const App = () => {
 
   return (
     <CartProvider>
-      <BrowserRouter basename='/parfum-shop'>
+      {/* WICHTIG: basename entfernen für Render */}
+      <BrowserRouter>
         <div className="App">
           <header>
             <h1>ParfumSamples.ch</h1>
